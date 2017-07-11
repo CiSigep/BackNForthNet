@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>BackNForthNet</title>
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <!--<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js" ></script> -->
+        <script type="text/javascript" src="~/Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/page.js"></script>
+    </head>
+    <body ng-app="BackNForthApp">
+        <div ng-controller="BackNForthController as BNFCTRL" class="center">
+            <textarea class="nonResize" id="messageDisplay" rows="30" cols="70" readonly></textarea>
+            <br />
+            <hr class="hrLine" />
+            <span class="sideSection">CSharp: </span>
+            <input ng-keypress="BNFCTRL.SubmitIfEnter($event)" ng-model="BNFCTRL.message" class="messageBox" id="messageData" type="text" /><button ng-click="BNFCTRL.SubmitMessage()" class="BNFButton" id="submitter">Send</button>
+        </div>
+    </body>
+</html>
